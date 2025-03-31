@@ -409,23 +409,27 @@ for (let j = 1; j <= number; j++) {
 console.log(evenArr);
 console.log(oddArr);
 
-//Multiply the Array members by 3
+//Write a program that Multiplies the Array members by 3 and outputs the result in another array
 let oldArr = [2, 4, 6, 8, 10, 12];
+let newArr = [];
 for (i = 0; i < oldArr.length; i++) {
   oldArr[i] *= 3;
+  newArr.push(oldArr[i]);
   //console.log(oldArr[i] * 3);
 }
-console.log(oldArr);
+console.log(newArr);
 
 //Make a program to calculate 10! FACTORIA
 let factorial = 1;
-let num = 10;
+let num = 5;
 for (let i = 1; i <= num; i++) {
   factorial *= i;
+  //console.log(factorial);
 }
- console.log(`The factorial of ${num} is ${factorial}`);
+console.log(`The factorial of ${num} is ${factorial}`);
 
 //FIBBIONACHI SEQUENCE
+//FOR LOOP
 let v = 20;
 
 let fibArr = [];
@@ -438,4 +442,21 @@ for (q = 0; q < v + 1; q++) {
     fibArr.push(fibArr[q - 1] + fibArr[q - 2]);
   }
 }
-console.log(fibArr);
+console.log(`Here's your Fibonacchi Sequence: ${fibArr}`);
+
+//WHILE LOOP
+let y = 20;
+let n = 0;
+let fibArr1 = [];
+
+while (n <= y) {
+  if ( n == 0) {
+    fibArr1.push(0);
+  } else if (n == 1) {
+    fibArr1.push(1);
+  } else {
+    fibArr1.push(fibArr1[n - 1] + fibArr1[n - 2]);
+  }
+  n++;
+}
+console.log(`Here's your Fibonacchi Sequence: ${fibArr1}`);
