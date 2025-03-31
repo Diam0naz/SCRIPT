@@ -167,10 +167,169 @@ let h = 0;
 
 // console.log(d===g);
 
-let a = 10;
-let b = 5;
+// let a = 10;
+// let b = 5;
 let c = 10;
 let d = 15;
 let e = 11;
 
-console.log(a++ == e);
+//console.log(a++ == e);
+
+// Manipulating Arrays
+//Pushing items into an array
+let myStack = [];
+myStack.push(1);
+myStack.push(2);
+myStack.push(3);
+//console.log(myStack);
+
+//Popping items from an array
+let popped = myStack.pop();
+//console.log(popped);//Result: 3
+//console.log(myStack);//what myStack looks like after popping the last item  [1, 2]
+
+//Shift and Unshift
+let myQueue = [];
+myQueue.unshift(1);
+myQueue.unshift(2);
+myQueue.unshift(3);
+// console.log(myQueue);
+
+// console.log(myQueue.shift()); //Result: 3
+
+// console.log(myQueue.shift()); //Result: 2
+
+// console.log(myQueue.shift()); //Result: 1
+
+//unshift() is used to insert a variable at the beginning of an array
+
+let myQueue1 = [];
+myQueue1.unshift(1);
+// console.log(myQueue1);
+
+//Write a program that takes a number and prints the  square-root of the number
+let a = 81;
+let sqrt = a ** 0.5;
+// console.log(sqrt);
+
+//Write a program that takes a number and prints the square of the number
+let b = 3;
+let sqr = b * b;
+// console.log(sqrt);
+
+//STRING OPERATORS
+//Concatenation +
+// console.log("Hello" + "," + " World!");
+let name = "Diamonaz";
+// console.log("Good morning! " + name);
+let school = "The Software Developer";
+let greeting = "Good morning, " + name;
+let tlgreeting = `Good moring, ${name} ${school}`;
+// console.log("String Concatenation: ", greeting);
+// console.log("Template Literals: ", tlgreeting);
+
+//Less than Operator <
+//first checks the length of he participating operands, secondly the ASCII values of the operands
+// console.log("apples" < "banana");
+
+let age = 40;
+// console.log("5" < age);
+
+// console.log("z" < "aaa");
+
+//Different behaviours of operators
+//minus anomaly (-)
+// console.log(4 - "2"); //returns 2
+// console.log("4" + "2"); //returns 42
+// console.log("42" - 2);
+// console.log(2 + 4 + "5");
+// console.log(true === "true");
+// console.log("apple" === new String("apple"));
+// console.log(typeof "apple", typeof new String("apple"));
+
+//Conditionals
+//IF and ElSE
+// let mark = 80;
+// if (mark >= 70) {
+//   let result = "A";
+//   console.log(`You passed! your grade is ${result}`);
+// } else {
+//   let result = "D";
+//   console.log(`You have failed, your grade is ${result}`);
+// }
+
+//ELSE-IF STATEMENTS
+// let mark = 90;
+// if (mark >= 70) {
+//   let result = "A";
+//   console.log(`You Aced! your grade is ${result}`);
+// } else if (mark >= 60) {
+//   let result = "B";
+//   console.log(`You have passed! your grade is ${result}`);
+// } else if (mark >= 50) {
+//   let result = "C";
+//   console.log(`You have passed! your grade is ${result}`);
+// } else if (mark >= 40) {
+//   let result = "D";
+//   console.log(`You have passed! your grade is ${result}`);
+// } else {
+//   let result = "F";
+//   console.log(`AHH NAWA FOR YOU BRUHH SEE YOUR SCORE ${result}`);
+// }
+
+let mark = 57;
+let grade;
+
+if (mark >= 70 && mark <= 100) {
+  grade = "A";
+} else if (mark >= 60 && mark <= 69) {
+  grade = "B";
+} else if (mark >= 50 && mark <= 59) {
+  grade = "C";
+} else if (mark >= 40 && mark <= 49) {
+  grade = "D";
+} else if (mark >= 0 && mark <= 39) {
+  grade = "F";
+} else {
+  grade = "Next year it is then ;)";
+}
+// console.log(grade);
+
+//Using Conditionals with string
+let nAme = "DIAMONDS";
+
+if (nAme == "DIAMONDS") {
+  // console.log("Welcome back!");
+} else {
+  // console.log("Who are you?");
+}
+
+//SWITCH statements
+let target = 50;
+let game;
+switch (true) {
+  case target >= 70 && target <= 100:
+    game = "A";
+    break;
+  case target >= 60 && target <= 69:
+    game = "B";
+    break;
+  case target >= 50 && target <= 59:
+    game = "C";
+    
+    break;
+  case target >= 40 && target <= 49:
+    game = "D";
+    break;
+  case target >= 30 && target >= 39:
+    game = "E";
+    break;
+  case target >= 0 && target <= 20:
+    game = "F";
+    break;
+  default:
+    game = "Denied!";
+    break;
+}
+
+console.log(game);
