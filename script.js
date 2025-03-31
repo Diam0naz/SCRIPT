@@ -305,7 +305,7 @@ if (nAme == "DIAMONDS") {
 }
 
 //SWITCH statements
-let target = 50;
+let target = 100;
 let game;
 switch (true) {
   case target >= 70 && target <= 100:
@@ -316,15 +316,14 @@ switch (true) {
     break;
   case target >= 50 && target <= 59:
     game = "C";
-    
     break;
   case target >= 40 && target <= 49:
     game = "D";
     break;
-  case target >= 30 && target >= 39:
+  case target >= 30 && target <= 39:
     game = "E";
     break;
-  case target >= 0 && target <= 20:
+  case target >= 0 && target <= 29:
     game = "F";
     break;
   default:
@@ -333,3 +332,110 @@ switch (true) {
 }
 
 console.log(game);
+
+//FOR LOOPS
+
+//DESCENDING ORDERED LOOPS
+for (let i = 10; i > 0; i--) {
+  //console.log(i);
+}
+
+//ASCENDING ORDERED LOOPS
+let evenArray = [];
+for (let j = 0; j <= 10; j += 2) {
+  //console.log(j);
+  evenArray.push(j);
+  //console.log(evenArray);
+}
+
+//WITHOUT A LOGIC THE "FOR" PROGRAM RUNS INFINITELY
+
+//Write an program that outputs even and odd numbers in an array
+//TASK
+
+//WHILE LOOPS
+let counter = 1;
+while (counter <= 3) {
+  //console.log("heyy!");
+  counter++;
+}
+
+//TASK ONE
+
+//We have an array of numbers
+//we will iterate through the array and sum all the numbers
+
+let array = [2, 6, 8, 9, 12, 98, 11];
+let result = 0;
+//An Array of 7 elements, having indexes of 0 - 6
+//to print the values of the array without hardcoding the values is importance
+for (
+  let i = 0;
+  i <= array.length - 1;
+  i++ //for (let i = 0; i < array.length; i++)
+) {
+  //prints the index of the Array
+  //console.log(i);
+  //Prints the values of variables stored in the array
+  //console.log(`The Value of i is ${i} and the array value is ${array[i]}`);
+
+  //console.log(`The initial value of result is ${result}`);
+  result += array[i];
+  //console.log(result);
+
+  //console.log(`The final value of result is ${result}`);
+}
+
+//TASK TWO
+
+//Using an Interger say a whole number
+// We will print all the even and odd numbers from 1 - 100
+
+let number = 100;
+let oddArr = [];
+let evenArr = [];
+for (let j = 1; j <= number; j++) {
+  //console.log(j);
+
+  //console.log(evenArray);
+  if (j % 2 == 0) {
+    //console.log(`the value ${j} is an even number`);
+    evenArr.push(j);
+  } else {
+    //console.log(`The number ${j} is an Odd number`);
+    oddArr.push(j);
+  }
+}
+console.log(evenArr);
+console.log(oddArr);
+
+//Multiply the Array members by 3
+let oldArr = [2, 4, 6, 8, 10, 12];
+for (i = 0; i < oldArr.length; i++) {
+  oldArr[i] *= 3;
+  //console.log(oldArr[i] * 3);
+}
+console.log(oldArr);
+
+//Make a program to calculate 10! FACTORIA
+let factorial = 1;
+let num = 10;
+for (let i = 1; i <= num; i++) {
+  factorial *= i;
+}
+ console.log(`The factorial of ${num} is ${factorial}`);
+
+//FIBBIONACHI SEQUENCE
+let v = 20;
+
+let fibArr = [];
+for (q = 0; q < v + 1; q++) {
+  if (q == 0) {
+    fibArr.push(0);
+  } else if (q == 1) {
+    fibArr.push(1);
+  } else {
+    fibArr.push(fibArr[q - 1] + fibArr[q - 2]);
+  }
+}
+console.log(fibArr);
