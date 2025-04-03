@@ -331,7 +331,7 @@ switch (true) {
     break;
 }
 
-console.log(game);
+//console.log(game);
 
 //FOR LOOPS
 
@@ -406,8 +406,8 @@ for (let j = 1; j <= number; j++) {
     oddArr.push(j);
   }
 }
-console.log(evenArr);
-console.log(oddArr);
+//console.log(evenArr);
+//console.log(oddArr);
 
 //Write a program that Multiplies the Array members by 3 and outputs the result in another array
 let oldArr = [2, 4, 6, 8, 10, 12];
@@ -417,18 +417,18 @@ for (i = 0; i < oldArr.length; i++) {
   newArr.push(oldArr[i]);
   //console.log(oldArr[i] * 3);
 }
-console.log(newArr);
+//console.log(newArr);
 
 //Make a program to calculate 10! FACTORIA
 let factorial = 1;
-let num = 5;
+let num = 10;
 for (let i = 1; i <= num; i++) {
   factorial *= i;
   //console.log(factorial);
 }
-console.log(`The factorial of ${num} is ${factorial}`);
+//console.log(`The factorial of ${num} is ${factorial}`);
 
-//FIBBIONACHI SEQUENCE
+//FIBONACCHI SEQUENCE
 //FOR LOOP
 let v = 20;
 
@@ -442,7 +442,7 @@ for (q = 0; q < v + 1; q++) {
     fibArr.push(fibArr[q - 1] + fibArr[q - 2]);
   }
 }
-console.log(`Here's your Fibonacchi Sequence: ${fibArr}`);
+//console.log(`Here's your Fibonacchi Sequence: ${fibArr}`);
 
 //WHILE LOOP
 let y = 20;
@@ -450,7 +450,7 @@ let n = 0;
 let fibArr1 = [];
 
 while (n <= y) {
-  if ( n == 0) {
+  if (n == 0) {
     fibArr1.push(0);
   } else if (n == 1) {
     fibArr1.push(1);
@@ -459,4 +459,613 @@ while (n <= y) {
   }
   n++;
 }
-console.log(`Here's your Fibonacchi Sequence: ${fibArr1}`);
+//console.log(`Here's your Fibonacchi Sequence: ${fibArr1}`);
+
+//Also a Fibionacchi Sequence
+let numBers = [0, 1];
+
+let howMany = 5;
+
+for (let i = 0; i < howMany; i++) {
+  numBers.push(howMany[i] + howMany[i + 1]);
+}
+
+//FIZZBUZZ PROBLEM
+
+//MULTIPLES OF 3 PRINT FIZZ
+//MULTIPLES OF 5 PRINT BUZZ
+//MULTIPLES OF 3 AND 5 PRINT FIZZBUZZ
+
+let numbers = 100;
+
+for (let i = 1; i <= numbers; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    //console.log(i, "FIZZ-BUZZ");
+  } else if (i % 5 == 0) {
+    //console.log(i, "BUZZ");
+  } else if (i % 3 == 0) {
+    //console.log(i, "FIZZ");
+  }
+}
+
+let students = [
+  "John",
+  "Peter",
+  "David",
+  "Isaac",
+  "Mustapha",
+  "James",
+  "Gabriel",
+  "Ken",
+];
+let message;
+for (l = 0; l < students.length; l++) {
+  //console.log(`WELCOME TO BLOCKFUSE LABS, ${students[l]}`)
+  if (students[l] == "Ken") {
+    message = "Student Exits in the Database";
+  } else {
+    continue;
+    console.log("Student does not exist");
+  }
+}
+//console.log(message);
+
+let arra = [8, 6, 2, 200, 4, 11, 16, 25, 5, 28];
+
+let max = 0;
+
+for (let i = 0; i < arra.length; i++) {
+  if (max < arra[i]) {
+    max = arra[i];
+  }
+  //console.log(max);
+}
+//console.log(max);
+
+let scoreArry = [25, 50, 75, 85, 90, 101, -45, 99, 67, 55, 75, 200];
+
+let results = [];
+
+let gradIng;
+
+for (t = 0; t < scoreArry.length; t++) {
+  if (scoreArry[t] >= 90 && scoreArry[t] <= 100) {
+    gradIng = "A";
+    results.push(gradIng);
+  } else if (scoreArry[t] >= 80 && scoreArry[t] <= 89) {
+    gradIng = "B";
+    results.push(gradIng);
+  } else if (scoreArry[t] >= 70 && scoreArry[t] <= 79) {
+    gradIng = "C";
+    results.push(gradIng);
+  } else if (scoreArry[t] >= 60 && scoreArry[t] <= 69) {
+    gradIng = "D";
+    results.push(gradIng);
+  } else if (scoreArry[t] >= 0 && scoreArry[t] <= 59) {
+    gradIng = "F";
+    results.push(gradIng);
+  } else {
+    gradIng = "Next year it is then ;)";
+    results.push(gradIng);
+  }
+  //continue;
+}
+
+//console.log(results);
+
+//Write a number that acceps a number and generates the even and odd numbers between 1 and the number n
+
+function evenOdd(num) {
+  let evenArr = [];
+
+  let oddArr = [];
+
+  for (let i = 1; i <= num; i++) {
+    if (i % 2 == 0) {
+      evenArr.push(i);
+      //return evenArr;
+    } else {
+      oddArr.push(i);
+      //return oddArr;
+    }
+  }
+  console.log(oddArr);
+  console.log(evenArr);
+}
+
+let unKnown = 30;
+
+//evenOdd(unKnown);
+
+//ASSIGNING FUNCTION TO A VARIABLE
+let findMax = function (arr) {
+  let max = 0;
+
+  for (let i = 0; i <= arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+  }
+};
+
+//ARROW FUNCTIONS ARE ANOTHER WAY FOR DECLARING FUNCTIONS BECAUSE OF THE " => " WRITTEN IN IT'S DECLARATION
+//
+// let findMax = (arr) => {
+//   let max = 0;
+
+//   for (let i = 0; i <= arr.length; i++) {
+//     if (max < arr[i]) {
+//       max = arr[i];
+//     }
+//   }
+// };
+
+//VARIABES OUTSIDE A  FUNCTION IS A GLOBAL VARIABLE
+//CAN BE ACCESSED ANYWHERE IN YOUR PROGRAM
+let scope = "global SCOPE";
+
+function localScope() {
+  //CANNOT BE ACCESSED EVERYWHERE EXCEPT THE FUNCTIONS SCOPE
+  let local = "local";
+} // IT CAN BE CALLED LOCAL SCOPE OR FUNCTION SCOPE
+
+//ASSIGNMENTS
+
+//#### TASK 1
+//WRITE A FUNCTION THAT IS GOING TO ACCEPT AS INPUT ANY LETTER OF THE 26 ALPHABET AND RETURN TRUE IF THE LETTER IS A VOWEL AND FALSE IF IT IS NOT A VOWEL.
+
+function vowelSort(Alphabet) {
+  let consonantLetter = [
+    "B",
+    "C",
+    "D",
+    "F",
+    "G",
+    "H",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+
+  let vowelLetter = ["A", "E", "I", "O", "U"];
+
+  for (let i = 0; i < vowelLetter.length; i++) {
+    if (Alphabet == vowelLetter[i]) {
+      console.log(`${Alphabet}, is a VOWEL so TRUE`);
+    }
+  }
+
+  for (let i = 0; i < consonantLetter.length; i++) {
+    if (Alphabet == consonantLetter[i]) {
+      console.log(`${Alphabet}, is a CONSONANT so FALSE`);
+    }
+  }
+}
+//ENSURE YOU ENTER STRING DATA TYPE
+//let Search = vowelSort("T");
+
+//#### TASK 2
+//WRITE A FUNCTION THAT RECIRVES AN ARRAY OF NUMBERS AS A PARAMETER AND IT SHOULD COMPUTE THE AVERAGE OF ALL THE NUMBERS IN THE ARRAY AND RETURN THE NUMBERS.
+function averageArr(arr) {
+  for (a = 0; a < arr.length; a++) {
+    xy += arr[a];
+  }
+
+  let avg = xy / arr.length;
+
+  console.log(avg);
+}
+let xy = 0;
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+//averageArr(arr);
+
+//#### TASK 3
+//WRITE A FUNCTION THAT CHECKS FOR THE SMALLEST NUMBER IN AN ARRAY
+
+function minNum(arr) {
+  let min = arr[0];
+
+  for (let i = 0; i < arry1.length; i++) {
+    if (min > arry1[i]) {
+      min = arry1[i];
+    }
+  }
+  console.log(min);
+}
+let arry1 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 50, 20, 22, 24, 26, 28, 30, 2, 1];
+//minNum(arry1);
+
+//#### TASK 4
+//WRITE A FUNCTION THAT RECIEVES A STRING AS AN INPUT AND RETURNS THE LETTERS THAT ARE VOWELS
+function wordSearch(word) {
+  let vowelLetters = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];
+
+  let newArr = [];
+
+  let vowLetters = [];
+
+  for (let i = 0; i < word.length; i++) {
+    newArr.push(word[i]);
+  }
+
+  //console.log(newArr);
+  for (let i = 0; i < newArr.length; i++) {
+    for (let j = 0; j < vowelLetters.length; j++) {
+      if (newArr[i] == vowelLetters[j]) {
+        vowLetters.push(newArr[i]);
+      }
+    }
+  }
+  console.log(
+    `The vowels in the word are ${vowLetters.length}. The Vowels in the word ${word} are: ${vowLetters}`
+  );
+}
+
+//wordSearch("CatAlOuge");
+
+//NESTED LOOPS
+function repeat(b) {
+  for (let i = 1; i <= 2; i++) {
+    
+    for (let j = 0; j <= 2; j++) {
+      console.log("outer", i);
+      console.log("Let's go to the bahamas", j);
+    }
+  }
+}
+
+repeat(b)
+
+//ARRAY METHODS
+function checkVowel(str) {
+  let vowel = "aeiou";
+  let result = [];
+
+  let formattedString = str.toLowerCase();
+
+  for (char in vowel) {
+    if (vowel.includes(formattedString[char])) {
+      result.push(formattedString[char]);
+    }
+  }
+  console.log(result);
+}
+
+checkVowel("Wellcome");
+
+//## MINI PROJECT: STIDENT DATABASE CHECKER
+//let studentDB = [
+/*  {
+    name: "JEMMA",
+    age: 30,
+    gender: "F",
+    course: "MEDICAL SCIENCES",
+  },
+  {
+    name: "RAYMOND",
+    age: 26,
+    gender: "M",
+    course: "PSYCHOLOGY",
+  },
+  {
+    name: "URIEL",
+    age: 24,
+    gender: "M",
+    course: "MEDICAL SCIENCES",
+  },
+  {
+    name: "NATHAN",
+    age: 22,
+    gender: "M",
+    course: "PSYCHOLOGY",
+  },
+  {
+    name: "RICHARD",
+    age: 29,
+    gender: "M",
+    course: "PSYCHOLOGY",
+  },
+  {
+    name: "HAUWA",
+    age: 22,
+    gender: "F",
+    course: "MEDICAL SCIENCES",
+  },
+  {
+    name: "BLESSING",
+    age: 19,
+    gender: "F",
+    course: "PSYCHOLOGY",
+  },
+  {
+    name: "ZUWAIRA",
+    age: 31,
+    gender: "F",
+    course: "PSYCHOLOGY",
+  },
+  {
+    name: "DEBBY",
+    age: 20,
+    gender: "F",
+    course: "PSYCHOLOGY",
+  },
+  {
+    name: "MICHEAL",
+    age: 19,
+    gender: "M",
+    course: "MEDICAL SCIENCES",
+  },
+];*/
+/*
+let medicalSciences = [];
+let psychology = [];
+
+function allocateDepartment(arr) {
+  for (let student in studentDB) {
+    if (studentDB[student].course === "MEDICAL SCIENCES") {
+      medicalSciences.push(studentDB[student]);
+    } else if (studentDB[student].course === "PSYCHOLOGY") {
+      psychology.push(studentDB[student]);
+    }
+  }
+
+  console.log(
+    "These are the students in the DEPARTMENT OF  MEDICINE",
+    medicalSciences
+  );
+  console.log(
+    "These are the students in the DEPARTMENT OF  PSYCHOLOGY",
+    psychology
+  );
+}
+*/
+//allocateDepartment(studentDB);
+
+let studentDB = [
+  {
+    name: "VICTOR",
+    age: "24",
+    gender: "M",
+    course: "AGRICULTUE",
+    stateOfOrigin: "IMO",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "MARY",
+    age: "26",
+    gender: "F",
+    course: "MEDICAL SCIENCES",
+    stateOfOrigin: "KOGI",
+    gradIng: "SECONDCLASS UPPER",
+  },
+  {
+    name: "JOHN",
+    age: "25",
+    gender: "M",
+    course: "PSYCHOLOGY",
+    stateOfOrigin: "KWARA",
+    gradIng: "SECONDCLASS LOWER",
+  },
+  {
+    name: "PETER",
+    age: "21",
+    gender: "M",
+    course: "LAW",
+    stateOfOrigin: "LAGOS",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "PRISCILLA",
+    age: "24",
+    gender: "F",
+    course: "ENGINEERING",
+    stateOfOrigin: "GOMBE",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "JEROME",
+    age: "23",
+    gender: "M",
+    course: "AGRICULTURE",
+    stateOfOrigin: "ENUGU",
+    gradIng: "SECONDCLASS LOWER",
+  },
+  {
+    name: "GOODNESS",
+    age: "22",
+    gender: "F",
+    course: "MEDICAL SCIENCES",
+    stateOfOrigin: "KANO",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "FATIMA",
+    age: "26",
+    gender: "F",
+    course: "PSYCHOLOGY",
+    stateOfOrigin: "SOKOTO",
+    gradIng: "SECONDCLASS UPPER",
+  },
+  {
+    name: "MUSA",
+    age: "32",
+    gender: "M",
+    course: "LAW",
+    stateOfOrigin: "GOMBE",
+    gradIng: "THIRDCLASS",
+  },
+  {
+    name: "JONAH",
+    age: "26",
+    gender: "M",
+    course: "ENGINEERING",
+    stateOfOrigin: "AKWA IBOM",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "LUKE",
+    age: "25",
+    gender: "M",
+    course: "ENGINEERING",
+    stateOfOrigin: "KANO",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "TIMOTHY",
+    age: "20",
+    gender: "M",
+    course: "LAW",
+    stateOfOrigin: "OSUN",
+    gradIng: "SECONDCLASS LOWER",
+  },
+  {
+    name: "DANIEL",
+    age: "27",
+    gender: "M",
+    course: "PSYCHOLOGY",
+    stateOfOrigin: "KOGI",
+    gradIng: "SECONDCLASS UPPER",
+  },
+  {
+    name: "HAUWA",
+    age: "23",
+    gender: "F",
+    course: "AGRICULTURE",
+    stateOfOrigin: "TARABA",
+    gradIng: "SECONDCLASS UPPER",
+  },
+  {
+    name: "JOHNSON",
+    age: "22",
+    gender: "M",
+    course: "MEDICAL SCIENCES",
+    stateOfOrigin: "KOGI",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "CHRISTABEL",
+    age: "27",
+    gender: "F",
+    course: "AGRICULTURE",
+    stateOfOrigin: "TARABA",
+    gradIng: "SECONDCLASS LOWER",
+  },
+  {
+    name: "AIYESHA",
+    age: "23",
+    gender: "F",
+    course: "MEDICAL SCIENCES",
+    stateOfOrigin: "LAGOS",
+    gradIng: "SECONDCLASS UPPER",
+  },
+  {
+    name: "NATASHA",
+    age: "21",
+    gender: "F",
+    course: "PSYCHOLOGY",
+    stateOfOrigin: "GOMBE",
+    gradIng: "THIRDLASS",
+  },
+  {
+    name: "NAOMI",
+    age: "26",
+    gender: "F",
+    course: "LAW",
+    stateOfOrigin: "KANO",
+    gradIng: "FIRSTCLASS",
+  },
+  {
+    name: "ELIZABETH",
+    age: "21",
+    gender: "F",
+    course: "ENGINEERING",
+    stateOfOrigin: "KOGI",
+    gradIng: "FIRSTCLASS",
+  },
+];
+
+//BE ABLE TO GET THE TOTAL NUMBER OF STUDENTS OFFERING THE DIFFERENT COURSES
+//SEARCH THE NAME OF A STUDENT TO RETURN THE CORRESPONDING DEPARTMENTS
+//TOTAL NUMBER OF MALES
+//TOTAL NUMBER OF FEMALES
+//CALCULATE THE TOTAL NUMBER OF STUDENTS
+//RETURN STATE OF ORIGIN FOR EACH STUDENT
+//RETURN TOTAL NUMBER OF STUDENTS THAT SHARE SAME STATE OF ORIGIN
+
+let medicalSciences = [];
+let agriculture = [];
+let engineering = [];
+let law = [];
+let psychology = [];
+
+let zz = studentDB;
+
+function numberDept(arr) {
+  for (let i in studentDB) {
+    if (studentDB[i].course === "AGRICULTURE") {
+      agriculture.push(studentDB[i]);
+    } else if (studentDB[i] === "MEDICAL SCIENCES") {
+      medicalSciences.push(studentDB[i]);
+    } else if (studentDB[i] === "PSYCHOLOGY") {
+      psychology.push(studentDB[i]);
+    } else if (studentDB[i] === "LAW") {
+      law.push(studentDB[i]);
+    }
+  }
+  console.log(agriculture);
+}
+
+
+
+//search for name
+//log out department for name
+
+
+function searchName(name) {
+
+ name = name.toUpperCase();
+
+  let search = studentDB.find((student) => student.name === name);
+  console.log(search);
+  if (search) {
+    console.log(
+      `The student ${search.name} is in the ${search.course} department`
+    );
+  } else {
+    console.log("Student not found");
+  }
+}
+
+
+//numberDept(zz);
+
+searchName("jonah");
+
+
+// let ab = 3
+// let bc = 4
+
+
+// let fg = ab + bc
+
+function add(a, b) {
+  a + b;
+  result = a + b;
+  console.log(result)
+}
+
+//add(3, 4)
+//add(5, 7)
